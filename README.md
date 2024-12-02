@@ -33,3 +33,18 @@ Example of the MAX picking up a frequency of 654.
 ## Finite State Machine
 ![Finite State Machine of Guitar Tuner](fsm.png)
 This is the fsm implemented by the code.
+
+## Limitations
+While this guitar tuner is an interesting idea in concept, it has some 
+practical limitations. As is, it needs a constant sound signal for an entire 
+second, and the source of the sound must be very close to the microphone, or 
+very loud. This is currently the biggest issue with it, and makes it not too 
+practical with a real guitar. Additionally, since everything is done in 
+integers, the frequencies are not the most precise without the fraction 
+portion. The time for a second is also an approximation, meaning the detected 
+frequencies are also approximations. This could potentially be solved with the 
+use of a crystal osciallator, as opposed to the MSP timer module, to achieve 
+more accurate seconds. The current tuner is set to not detect frequencies 
+lower than 33 Hz because it can be innacurate with lower frequencies. Despite 
+these limitations, this was still a fun project to work on and, being my first 
+embedded project, taught me a ton.
