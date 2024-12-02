@@ -14,7 +14,7 @@ inaccuracies from noise. The second is calculated via the an on-board timer
 module. The number of clock cycles used for one second was found through trial 
 and error, and is approximate.  
 
-##Display
+## Display
 Once the frequency of a one second sound wave is found, some information is 
 displayed on the LCD. First, the closest musical notes both with a frequency 
 above and below are displayed with their frequencies, as well as the detected 
@@ -23,13 +23,13 @@ implemented as an array. The intent is to guide the user towards a desired
 note until the frequencies match. This is done via I2C. The on-board I2C 
 controller is used, as well as the AC780S controller built into the LCD.  
 
-##Example Output
+## Example Output
 ![Picture of the LCD Display in action](example.jpg)
 Example of the MAX picking up a frequency of 654.  
 
-##Circuit Diagram
+## Circuit Diagram
 ![Circuit Diagram of Guitar Tuner](circuit_diagram.png)
 
-##Finite State Machine
+## Finite State Machine
 ![Finite State Machine of Guitar Tuner](fsm.png)
 This is the fsm implemented by the code.
